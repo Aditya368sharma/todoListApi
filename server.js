@@ -1,4 +1,3 @@
-
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
@@ -10,10 +9,11 @@ var express = require('express'),
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Tododb');
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res) => res.send('Hello World!'))
 
 var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
