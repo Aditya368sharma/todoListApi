@@ -15,5 +15,13 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.7"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aditya368sharma/todoListApi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aditya368sharma/todoListApi/issues"
+  },
+  "homepage": "https://github.com/Aditya368sharma/todoListApi#readme",
   "description": ""
 }
