@@ -27,7 +27,8 @@ app.get("/webhook", function (req, res) {
     console.error("Verification failed. The tokens do not match.");
     res.sendStatus(403);
   }
-});
+}
+);
 
 
 // All callbacks for Messenger will be POST-ed here
