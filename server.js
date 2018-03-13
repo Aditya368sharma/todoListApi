@@ -5,7 +5,8 @@ var bodyParser = require("body-parser");
 var app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.listen((process.env.PORT || 3000));
+var port =process.env.PORT || 3000;
+app.listen(port);
 
 
 app.get('/', (req, res) => res.send('Hello World!'));
@@ -93,3 +94,5 @@ function sendMessage(recipientId, message) {
     }
   });
 }
+
+console.log('todo list RESTful API server started on: ' + port);
